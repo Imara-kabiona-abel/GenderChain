@@ -52,15 +52,15 @@
     if (isNaN(target)) return;
 
     function animate() {
-      if (reduceMotion) { el.textContent = target; return; }
+      if (reduceMotion) { el.textContent = target.toLocaleString("fr-FR"); return; }
       var duration = 1300, start = null;
       function step(ts) {
         if (start === null) start = ts;
         var progress = Math.min((ts - start) / duration, 1);
         var eased = 1 - Math.pow(1 - progress, 3);
-        el.textContent = Math.round(target * eased);
+        el.textContent = Math.round(target * eased).toLocaleString("fr-FR");
         if (progress < 1) requestAnimationFrame(step);
-        else el.textContent = target;
+        else el.textContent = target.toLocaleString("fr-FR");
       }
       requestAnimationFrame(step);
     }
