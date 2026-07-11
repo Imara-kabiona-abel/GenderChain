@@ -81,7 +81,7 @@
 
   /* ---------------- Reveal on scroll (cards + partners) ---------------- */
   (function initReveal() {
-    var targets = document.querySelectorAll(".reveal, .ps-card, .link-card, .team-member");
+    var targets = document.querySelectorAll(".reveal, .ps-card, .link-card, .team-member, .achv-card");
     targets.forEach(function (el) { el.classList.add("reveal"); });
 
     var partners = document.querySelectorAll(".partner");
