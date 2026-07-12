@@ -20,6 +20,25 @@
     });
   })();
 
+  /* ---------------- Language toggle (FR/EN) ---------------- */
+  (function initLangToggle() {
+    var langInputs = document.querySelectorAll("input[name='lang']");
+    if (!langInputs.length) return;
+
+    function applyLang(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll("[data-fr]").forEach(function (el) {
+        var text = lang === "en" ? el.getAttribute("data-en") : el.getAttribute("data-fr");
+        if (text != null) el.textContent = text;
+      });
+    }
+    langInputs.forEach(function (input) {
+      input.addEventListener("change", function () {
+        if (input.checked) applyLang(input.value);
+      });
+    });
+  })();
+
   /* ---------------- Scroll-spy ---------------- */
   (function initScrollSpy() {
     var navLinks = document.querySelectorAll(".nav-links a[href^='#']");
