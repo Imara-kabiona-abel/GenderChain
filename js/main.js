@@ -39,6 +39,16 @@
     });
   })();
 
+  /* ---------------- Bouton "Autres langues" (Google Traduction, nouvel onglet) ---------------- */
+  (function initTranslateMore() {
+    var btn = document.getElementById("translateMore");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var url = "https://translate.google.com/translate?sl=fr&u=" + encodeURIComponent(window.location.href);
+      window.open(url, "_blank", "noopener");
+    });
+  })();
+
   /* ---------------- Scroll-spy ---------------- */
   (function initScrollSpy() {
     var navLinks = document.querySelectorAll(".nav-links a[href^='#']");
