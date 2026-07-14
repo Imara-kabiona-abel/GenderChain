@@ -15,16 +15,21 @@
 </head>
 <body>
 
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
 <nav class="topnav">
   <a href="#home" class="brand" aria-label="Accueil GenderChain">
     <img src="assets/logo-genderchain-large.jpg" alt="GenderChain" class="brand-logo">
   </a>
   <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">☰</button>
   <div class="nav-links" id="navLinks">
+    <a href="#apropos" data-fr="GenderChain" data-en="GenderChain">GenderChain</a>
     <a href="#mission" data-fr="Mission" data-en="Mission">Mission</a>
+    <a href="#valeurs" data-fr="Valeurs" data-en="Values">Valeurs</a>
     <a href="#objectif" data-fr="Objectif" data-en="Goal">Objectif</a>
     <a href="#realisations" data-fr="Réalisations" data-en="Achievements">Réalisations</a>
-    <a href="#liens" data-fr="Liens utiles" data-en="Useful links">Liens utiles</a>
+    <a href="#actualites" data-fr="Actualités" data-en="News">Actualités</a>
+    <a href="#opportunites" data-fr="Opportunités" data-en="Opportunities">Opportunités</a>
     <a href="#equipe" data-fr="Équipe" data-en="Team">Équipe</a>
     <a href="#partenaires" data-fr="Partenaires" data-en="Partners">Partenaires</a>
     <a href="#soutenir" data-fr="Nous soutenir" data-en="Support us">Nous soutenir</a>
@@ -32,7 +37,6 @@
       <label><input type="radio" name="lang" value="fr" checked><span>FR</span></label>
       <label><input type="radio" name="lang" value="en"><span>EN</span></label>
     </div>
-    <button type="button" class="translate-more" id="translateMore" data-fr="🌐 Autres langues" data-en="🌐 Other languages">🌐 Autres langues</button>
     <a class="btn primary nav-cta" href="https://chat.whatsapp.com/Bly9EqFzgAgBTYxH9DH9Xu" target="_blank" rel="noopener" data-fr="Rejoindre" data-en="Join us">Rejoindre</a>
   </div>
 </nav>
@@ -63,6 +67,30 @@
     </div>
   </section>
 
+  <!-- ============ QU'EST-CE QUE GENDERCHAIN ============ -->
+  <section id="apropos" class="section">
+    <div class="section-head">
+      <p class="eyebrow" data-fr="Qu'est-ce que GenderChain ?" data-en="What is GenderChain?">Qu'est-ce que GenderChain ?</p>
+      <h2 data-fr="Une initiative communautaire, née à Goma" data-en="A community initiative, born in Goma">Une initiative communautaire, née à Goma</h2>
+    </div>
+    <div class="card">
+      <p data-fr="GenderChain est une initiative communautaire basée à Goma, en République Démocratique du Congo, qui forme et connecte de jeunes femmes — et des hommes alliés — à l'écosystème blockchain Cardano et au Web3. Elle est née d'un constat simple : les femmes congolaises restent largement absentes des filières technologiques locales, faute d'accès à une éducation numérique de qualité et d'exposition aux opportunités du secteur." data-en="GenderChain is a community initiative based in Goma, DR Congo, that trains and connects young women — and male allies — to the Cardano blockchain ecosystem and Web3. It was born from a simple observation: Congolese women remain largely absent from local tech fields, due to limited access to quality digital education and exposure to opportunities in the sector.">GenderChain est une initiative communautaire basée à Goma, en République Démocratique du Congo, qui forme et connecte de jeunes femmes — et des hommes alliés — à l'écosystème blockchain Cardano et au Web3. Elle est née d'un constat simple : les femmes congolaises restent largement absentes des filières technologiques locales, faute d'accès à une éducation numérique de qualité et d'exposition aux opportunités du secteur.</p>
+      <p style="margin-bottom:0" data-fr="Concrètement, nous construisons des formations, du mentorat, des contenus éducatifs locaux et des occasions réelles de participer à la gouvernance et aux projets de l'écosystème Cardano — pour que la prochaine génération du numérique congolais s'écrive aussi, et surtout, au féminin." data-en="Concretely, we build training programs, mentorship, local educational content, and real opportunities to take part in the governance and projects of the Cardano ecosystem — so that the next generation of Congolese digital talent is also, and above all, written by women.">Concrètement, nous construisons des formations, du mentorat, des contenus éducatifs locaux et des occasions réelles de participer à la gouvernance et aux projets de l'écosystème Cardano — pour que la prochaine génération du numérique congolais s'écrive aussi, et surtout, au féminin.</p>
+    </div>
+
+    <div class="card cagnotte-card">
+      <div>
+        <span class="eyebrow" data-fr="Soutien solidaire" data-en="Solidarity support">Soutien solidaire</span>
+        <h3 data-fr="Créez votre cagnotte solidaire pour GenderChain" data-en="Create your solidarity fundraiser for GenderChain">Créez votre cagnotte solidaire pour GenderChain</h3>
+        <p data-fr="Vous voulez soutenir GenderChain à votre façon ? Créez votre propre cagnotte solidaire sur la plateforme de votre choix (Leetchi, GoFundMe, ou équivalent local) et reversez les fonds collectés à notre initiative. Chaque contribution, même modeste, finance directement une formation, un atelier ou du matériel pédagogique pour nos apprenantes. Une fois votre cagnotte créée, écrivez-nous : nous serons heureux de la relayer auprès de notre communauté." data-en="Want to support GenderChain in your own way? Create your own solidarity fundraiser on the platform of your choice (Leetchi, GoFundMe, or a local equivalent) and pass on the funds raised to our initiative. Every contribution, however modest, directly funds a training session, a workshop, or teaching materials for our learners. Once your fundraiser is live, write to us — we'll be glad to share it with our community.">Vous voulez soutenir GenderChain à votre façon ? Créez votre propre cagnotte solidaire sur la plateforme de votre choix (Leetchi, GoFundMe, ou équivalent local) et reversez les fonds collectés à notre initiative. Chaque contribution, même modeste, finance directement une formation, un atelier ou du matériel pédagogique pour nos apprenantes. Une fois votre cagnotte créée, écrivez-nous : nous serons heureux de la relayer auprès de notre communauté.</p>
+        <div class="ps-links">
+          <a class="btn primary" href="https://www.leetchi.com/en/create" target="_blank" rel="noopener" data-fr="Créer ma cagnotte solidaire" data-en="Create my fundraiser">Créer ma cagnotte solidaire</a>
+          <a class="btn outline" href="mailto:genderchaindrc@gmail.com?subject=Ma%20cagnotte%20solidaire%20pour%20GenderChain" data-fr="Nous informer de ma cagnotte" data-en="Tell us about my fundraiser">Nous informer de ma cagnotte</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ MISSION (PROBLEME / SOLUTION) ============ -->
   <section id="mission" class="section">
     <div class="section-head">
@@ -80,6 +108,35 @@
         <div class="ps-links">
           <a class="btn outline" href="https://lu.ma/eaacllom" target="_blank" rel="noopener" data-fr="S'inscrire à un événement" data-en="Register for an event">S'inscrire à un événement</a>
           <a class="btn outline" href="https://chat.whatsapp.com/Bly9EqFzgAgBTYxH9DH9Xu" target="_blank" rel="noopener" data-fr="Rejoindre WhatsApp" data-en="Join WhatsApp">Rejoindre WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NOS VALEURS ============ -->
+  <section id="valeurs" class="section section-bgphoto" style="background-image:url('assets/achievement-constit-1.jpg')">
+    <div class="section-bgphoto-overlay"></div>
+    <div class="section-bgphoto-content">
+      <div class="section-head">
+        <p class="eyebrow on-dark" data-fr="Ce qui nous guide" data-en="What guides us">Ce qui nous guide</p>
+        <h2 style="color:#fff" data-fr="Nos valeurs" data-en="Our values">Nos valeurs</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <h3 data-fr="Inclusion" data-en="Inclusion">Inclusion</h3>
+          <p data-fr="La technologie de demain doit être écrite par toutes et tous. Nous ouvrons la porte de la blockchain aux femmes en priorité, sans jamais fermer celle des hommes alliés qui portent la même cause." data-en="Tomorrow's technology must be written by everyone. We open the door to blockchain for women first, without ever closing it to male allies who share the same cause.">La technologie de demain doit être écrite par toutes et tous. Nous ouvrons la porte de la blockchain aux femmes en priorité, sans jamais fermer celle des hommes alliés qui portent la même cause.</p>
+        </div>
+        <div class="value-card">
+          <h3 data-fr="Éducation accessible" data-en="Accessible education">Éducation accessible</h3>
+          <p data-fr="Une formation de qualité ne devrait jamais dépendre du lieu de naissance. Nous rapprochons l'écosystème Cardano de Goma, Bukavu et Beni, avec des contenus pensés pour un contexte réel, pas importés tels quels." data-en="Quality training should never depend on where you were born. We bring the Cardano ecosystem closer to Goma, Bukavu and Beni, with content designed for a real context, not imported as-is.">Une formation de qualité ne devrait jamais dépendre du lieu de naissance. Nous rapprochons l'écosystème Cardano de Goma, Bukavu et Beni, avec des contenus pensés pour un contexte réel, pas importés tels quels.</p>
+        </div>
+        <div class="value-card">
+          <h3 data-fr="Transparence" data-en="Transparency">Transparence</h3>
+          <p data-fr="Comme la blockchain elle-même, nous croyons en des actions vérifiables : nos ateliers, nos partenaires et nos comptes rendus sont documentés et partagés ouvertement avec notre communauté." data-en="Like blockchain itself, we believe in verifiable action: our workshops, our partners and our reports are documented and shared openly with our community.">Comme la blockchain elle-même, nous croyons en des actions vérifiables : nos ateliers, nos partenaires et nos comptes rendus sont documentés et partagés ouvertement avec notre communauté.</p>
+        </div>
+        <div class="value-card">
+          <h3 data-fr="Autonomisation" data-en="Empowerment">Autonomisation</h3>
+          <p data-fr="Former, ce n'est pas seulement transmettre un savoir : c'est ouvrir des opportunités économiques concrètes, du Project Catalyst à l'entrepreneuriat numérique, pour que chaque apprenante devienne actrice de l'écosystème." data-en="Training is not only about passing on knowledge: it's about opening real economic opportunities, from Project Catalyst to digital entrepreneurship, so every learner becomes an active player in the ecosystem.">Former, ce n'est pas seulement transmettre un savoir : c'est ouvrir des opportunités économiques concrètes, du Project Catalyst à l'entrepreneuriat numérique, pour que chaque apprenante devienne actrice de l'écosystème.</p>
         </div>
       </div>
     </div>
@@ -140,6 +197,79 @@
           <a class="btn outline" href="https://drive.google.com/drive/folders/1YT67gvT7c-BS5-Jmt0eQmaxRosxMdfuw?usp=drive_link" target="_blank" rel="noopener" data-fr="Voir toutes les photos" data-en="See all photos">Voir toutes les photos</a>
         </div>
       </div>
+      <div class="achv-card">
+        <div class="achv-body" style="padding-top:1.6rem">
+          <span class="eyebrow" data-fr="Communauté" data-en="Community">Communauté</span>
+          <h3 data-fr="Un club de 500+ volontaires en ligne" data-en="A club of 500+ online volunteers">Un club de 500+ volontaires en ligne</h3>
+          <p data-fr="Sensibilisation des jeunes sur le genre et le numérique. Rejoignez-nous pour changer la donne dans ce monde." data-en="Raising youth awareness on gender and digital technology. Join us to change the game in this world.">Sensibilisation des jeunes sur le genre et le numérique. Rejoignez-nous pour changer la donne dans ce monde.</p>
+          <div class="ps-links">
+            <a class="btn primary" href="https://luma.com/fgizs0sb" target="_blank" rel="noopener" data-fr="Rejoindre le club" data-en="Join the club">Rejoindre le club</a>
+            <a class="btn outline" href="https://drive.google.com/drive/folders/1NM_QKaass0_qHjAf6d9usi_fM0Er3Uz-?usp=drive_link" target="_blank" rel="noopener" data-fr="Télécharger mon certificat de volontariat" data-en="Download my volunteer certificate">Télécharger mon certificat de volontariat</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACTUALITES ============ -->
+  <section id="actualites" class="section">
+    <div class="section-head">
+      <p class="eyebrow" data-fr="La semaine chez GenderChain" data-en="This week at GenderChain">La semaine chez GenderChain</p>
+      <h2 data-fr="Nos dernières actualités" data-en="Our latest news">Nos dernières actualités</h2>
+      <p data-fr="Informez-vous sur nos actions à travers nos reportages, articles, événements…" data-en="Stay informed about our work through our reports, articles, events…">Informez-vous sur nos actions à travers nos reportages, articles, événements…</p>
+    </div>
+    <div class="news-grid" id="newsGrid">
+      <p class="muted" id="newsLoading" data-fr="Chargement des actualités…" data-en="Loading news…">Chargement des actualités…</p>
+    </div>
+  </section>
+
+  <!-- ============ OPPORTUNITES ============ -->
+  <section id="opportunites" class="section">
+    <div class="section-head">
+      <p class="eyebrow" data-fr="Nous rejoindre" data-en="Join us">Nous rejoindre</p>
+      <h2 data-fr="Opportunités" data-en="Opportunities">Opportunités</h2>
+    </div>
+    <div class="links-grid">
+      <a class="link-card" href="https://chat.whatsapp.com/Bly9EqFzgAgBTYxH9DH9Xu" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20l1.1-5.4A8.5 8.5 0 1 1 21 11.5Z"/></svg></span>
+        <span><strong data-fr="Communauté WhatsApp" data-en="WhatsApp community">Communauté WhatsApp</strong><span data-fr="Échangez avec le groupe" data-en="Chat with the group">Échangez avec le groupe</span></span>
+      </a>
+      <a class="link-card" href="https://lu.ma/eaacllom" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></span>
+        <span><strong data-fr="Événements" data-en="Events">Événements</strong><span data-fr="Ateliers, conférences, formations" data-en="Workshops, talks, training">Ateliers, conférences, formations</span></span>
+      </a>
+      <a class="link-card" href="https://luma.com/fgizs0sb" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3 3-5 7-5s7 2 7 5"/><circle cx="18" cy="9" r="2.4"/><path d="M15 20c.3-2 2-4 5-4"/></svg></span>
+        <span><strong data-fr="Club de volontaires" data-en="Volunteer club">Club de volontaires</strong><span data-fr="500+ membres en ligne" data-en="500+ members online">500+ membres en ligne</span></span>
+      </a>
+      <a class="link-card" href="mailto:genderchaindrc@gmail.com?subject=Devenir%20partenaire%20de%20GenderChain">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></span>
+        <span><strong data-fr="Devenir partenaire" data-en="Become a partner">Devenir partenaire</strong><span data-fr="Organisation, bailleur, mentor" data-en="Organization, funder, mentor">Organisation, bailleur, mentor</span></span>
+      </a>
+    </div>
+
+    <div class="section-head" style="margin-top:2.6rem">
+      <p class="eyebrow" data-fr="Toute l'année" data-en="All year round">Toute l'année</p>
+      <h2 data-fr="Participer à nos événements" data-en="Take part in our events">Participer à nos événements</h2>
+      <p data-fr="Tout au long de l'année, vous pouvez nous soutenir en participant à différents événements que nous organisons." data-en="Throughout the year, you can support us by taking part in the various events we organize.">Tout au long de l'année, vous pouvez nous soutenir en participant à différents événements que nous organisons.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <h3 data-fr="Expositions" data-en="Exhibitions">Expositions</h3>
+        <p data-fr="Présentation publique de nos projets et de nos apprenantes, pour faire connaître la place des femmes dans l'écosystème Cardano." data-en="Public presentation of our projects and our learners, to showcase women's place in the Cardano ecosystem.">Présentation publique de nos projets et de nos apprenantes, pour faire connaître la place des femmes dans l'écosystème Cardano.</p>
+      </div>
+      <div class="value-card">
+        <h3 data-fr="Conférences" data-en="Conferences">Conférences</h3>
+        <p data-fr="Interventions et tables rondes sur le genre, le Web3 et l'inclusion numérique, avec des intervenantes de notre communauté." data-en="Talks and panel discussions on gender, Web3 and digital inclusion, featuring speakers from our community.">Interventions et tables rondes sur le genre, le Web3 et l'inclusion numérique, avec des intervenantes de notre communauté.</p>
+      </div>
+      <div class="value-card">
+        <h3 data-fr="Dossards solidaires" data-en="Charity race bibs">Dossards solidaires</h3>
+        <p data-fr="Courses et marches sponsorisées : chaque dossard porté finance directement une formation pour une jeune femme." data-en="Sponsored runs and walks: every bib worn directly funds a training for a young woman.">Courses et marches sponsorisées : chaque dossard porté finance directement une formation pour une jeune femme.</p>
+      </div>
+      <div class="value-card">
+        <h3 data-fr="Streaming caritatifs" data-en="Charity livestreams">Streaming caritatifs</h3>
+        <p data-fr="Diffusions en direct où les dons de la communauté sont reversés à nos programmes de formation." data-en="Live broadcasts where community donations are given directly to our training programs.">Diffusions en direct où les dons de la communauté sont reversés à nos programmes de formation.</p>
+      </div>
     </div>
   </section>
 
@@ -184,14 +314,14 @@
         <img class="team-photo" src="assets/team-abel.jpg" alt="Imara Kabiona Abel">
         <div class="team-info">
           <h3>Imara Kabiona Abel</h3>
-          <span class="role" data-fr="chef de programme/ team Leader" data-en="chef de programme/ team Leade </span>
-          <div class="team-links">
-            <a href="https://portfolio.lkb.dpdns.org/" target="_blank" rel="noopener">Portfolio</a>
-            <a href="https://www.facebook.com/abel.kab.5" target="_blank" rel="noopener">Facebook</a>
-            <a href="https://instagram.com/imara_kabiona_abel?igshid=ZDdkNTZiNTM=" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://www.linkedin.com/in/imara-kabiona-abel" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://twitter.com/imaraabel1?t=1zpF5lqLJD_cFEqYKY8kkg&s=09" target="_blank" rel="noopener">Twitter</a>
-            <a href="https://lkb306021747.wordpress.com/" target="_blank" rel="noopener">WordPress</a>
+          <span class="role" data-fr="Team Leader / Chef de programme" data-en="Team Leader / Program Manager">Team Leader / Chef de programme</span>
+          <div class="team-links icon-links">
+            <a href="https://portfolio.lkb.dpdns.org/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z"/></svg>Portfolio</a>
+            <a href="https://www.facebook.com/abel.kab.5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.2h2.4l.4-2.8h-2.8V9.1c0-.8.2-1.4 1.4-1.4h1.5V5.2C15.9 5.1 15 5 14 5c-2.2 0-3.6 1.3-3.6 3.7v2.3H8v2.8h2.4V21z"/></svg>Facebook</a>
+            <a href="https://instagram.com/imara_kabiona_abel?igshid=ZDdkNTZiNTM=" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>Instagram</a>
+            <a href="https://www.linkedin.com/in/imara-kabiona-abel" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2 3.77-2 4.03 0 4.78 2.6 4.78 6V21h-4v-5.3c0-1.27-.02-2.9-1.77-2.9-1.78 0-2.05 1.38-2.05 2.8V21H9z"/></svg>LinkedIn</a>
+            <a href="https://twitter.com/imaraabel1?t=1zpF5lqLJD_cFEqYKY8kkg&s=09" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 5.9c-.7.3-1.5.6-2.3.7a4 4 0 0 0 1.7-2.2c-.8.5-1.7.8-2.6 1a4 4 0 0 0-6.9 3.6A11.3 11.3 0 0 1 3 4.9a4 4 0 0 0 1.2 5.3c-.6 0-1.2-.2-1.7-.5v.1a4 4 0 0 0 3.2 3.9c-.6.2-1.2.2-1.7.1a4 4 0 0 0 3.7 2.8A8 8 0 0 1 2 18.6a11.3 11.3 0 0 0 6.1 1.8c7.3 0 11.3-6.1 11.3-11.3v-.5c.8-.6 1.4-1.3 1.9-2.1-.7.3-1.5.5-2.3.6Z"/></svg>Twitter</a>
+            <a href="https://lkb306021747.wordpress.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z"/></svg>WordPress</a>
           </div>
         </div>
       </article>
@@ -222,7 +352,7 @@
         <img class="team-photo" src="assets/team-olivier.jpg" alt="Olivier Mwatsi Mulamo">
         <div class="team-info">
           <h3>Olivier Mwatsi Mulamo</h3>
-          <span class="role" data-fr="Responsable technique — Blockchain" data-en="Technical lead — DApp developer">Responsable technique — Blockchain</span>
+          <span class="role" data-fr="Responsable technique — Blockchain" data-en="Technical lead — Blockchain">Responsable technique — Blockchain</span>
         </div>
       </article>
 
@@ -242,7 +372,7 @@
         <img class="team-photo" src="assets/team-furaha.jpg" alt="Furaha Ngabo Daniella">
         <div class="team-info">
           <h3>Furaha Ngabo Daniella</h3>
-          <span class="role" data-fr="Chargée de suivi-évaluation" data-en=" Monitoring & evaluation">Chargée de suivi-évaluation</span>
+          <span class="role" data-fr="Chargée de suivi-évaluation" data-en="Monitoring & evaluation officer">Chargée de suivi-évaluation</span>
           <div class="team-links">
             <a href="https://www.linkedin.com/in/daniella-furaha-a03ba2337/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
@@ -257,23 +387,14 @@
       <p class="eyebrow" data-fr="Ils nous accompagnent" data-en="They support us">Ils nous accompagnent</p>
       <h2 data-fr="Partenaires" data-en="Partners">Partenaires</h2>
     </div>
-    <div class="partners-row">
-      <div class="partner">
-        <img src="assets/partner-mithr.png" alt="Token Mithrandir">
-        <span class="pname" style="color:#2F5FEA">Mithrandir</span>
-        <span class="plabel" data-fr="Partenaire" data-en="Partner">Partenaire</span>
-      </div>
-      <div class="partner">
-        <img src="assets/partner-crew.png" alt="CREW — Creative Women Service">
-        <span class="pname" style="color:#EA5B1F">CREW</span>
-        <span class="plabel" data-fr="Partenaire" data-en="Partner">Partenaire</span>
-      </div>
-      <div class="partner">
-        <a href="https://cardano.wims.io/" target="_blank" rel="noopener">
-          <img src="assets/partner-coxygen.jpg" alt="Coxygen Global — WIMS Cardano">
-        </a>
-        <span class="pname" style="color:#E8A23C">Coxygen Global</span>
-        <span class="plabel">WIMS-Cardano</span>
+    <div class="marquee" id="partnerMarquee">
+      <div class="marquee-track">
+        <div class="partner"><img src="assets/partner-mithr.png" alt="Token Mithrandir"><span class="pname" style="color:#2F5FEA">Mithrandir</span><span class="plabel" data-fr="Partenaire" data-en="Partner">Partenaire</span></div>
+        <div class="partner"><img src="assets/partner-crew.png" alt="CREW — Creative Women Service"><span class="pname" style="color:#EA5B1F">CREW</span><span class="plabel" data-fr="Partenaire" data-en="Partner">Partenaire</span></div>
+        <div class="partner"><a href="https://cardano.wims.io/" target="_blank" rel="noopener"><img src="assets/partner-coxygen.jpg" alt="Coxygen Global — WIMS Cardano"></a><span class="pname" style="color:#E8A23C">Coxygen Global</span><span class="plabel">WIMS-Cardano</span></div>
+        <div class="partner" aria-hidden="true"><img src="assets/partner-mithr.png" alt=""><span class="pname" style="color:#2F5FEA">Mithrandir</span><span class="plabel">Partenaire</span></div>
+        <div class="partner" aria-hidden="true"><img src="assets/partner-crew.png" alt=""><span class="pname" style="color:#EA5B1F">CREW</span><span class="plabel">Partenaire</span></div>
+        <div class="partner" aria-hidden="true"><img src="assets/partner-coxygen.jpg" alt=""><span class="pname" style="color:#E8A23C">Coxygen Global</span><span class="plabel">WIMS-Cardano</span></div>
       </div>
     </div>
   </section>
@@ -295,20 +416,92 @@
           <a class="btn primary" href="https://lkb.dpdns.org/" target="_blank" rel="noopener" data-fr="Commander chez ETS LKB" data-en="Order from ETS LKB">Commander chez ETS LKB</a>
           <a class="btn outline" href="mailto:genderchaindrc@gmail.com?subject=Collaboration%20avec%20ETS%20LKB%20Company" data-fr="Proposer une collaboration" data-en="Propose a collaboration">Proposer une collaboration</a>
         </div>
+        <div class="crypto-note">
+          <div class="crypto-badges">
+            <span class="crypto-badge" style="--c:#0033AD">₳ ADA</span>
+            <span class="crypto-badge" style="--c:#26A17B">₮ USDT</span>
+            <span class="crypto-badge" style="--c:#8A7686">+ autres</span>
+          </div>
+          <p data-fr="Le paiement en cryptomonnaies est accepté dans notre boutique (ADA, USDT et autres). Nous assurons également le change de vos cryptos vers la monnaie locale." data-en="Cryptocurrency payment is accepted in our shop (ADA, USDT and others). We also offer exchange of your crypto into local currency.">Le paiement en cryptomonnaies est accepté dans notre boutique (ADA, USDT et autres). Nous assurons également le change de vos cryptos vers la monnaie locale.</p>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section id="newsletter" class="section">
+    <div class="card newsletter-card">
+      <div class="newsletter-text">
+        <span class="eyebrow" data-fr="Newsletter" data-en="Newsletter">Newsletter</span>
+        <h2 data-fr="Rejoindre la communauté" data-en="Join the community">Rejoindre la communauté</h2>
+        <p data-fr="Vous aurez accès à toutes les ressources gratuites de la plateforme : articles, entretiens, outils… Pour la nouvelle génération qui rêve d'humanitaire, et celles et ceux qui les accompagnent." data-en="You'll get access to all of the platform's free resources: articles, interviews, tools… For the new generation who dream of humanitarian work, and those who support them.">Vous aurez accès à toutes les ressources gratuites de la plateforme : articles, entretiens, outils… Pour la nouvelle génération qui rêve d'humanitaire, et celles et ceux qui les accompagnent.</p>
+      </div>
+      <form class="newsletter-form" id="newsletterForm" action="https://formspree.io/f/mojgqngk" method="POST">
+        <input type="hidden" name="_subject" value="Nouvelle inscription Newsletter GenderChain">
+        <div class="nl-row">
+          <input type="text" name="Nom" placeholder="Nom" data-fr-placeholder="Nom" data-en-placeholder="Name" required>
+          <input type="email" name="Email" placeholder="Email" required>
+        </div>
+        <button type="submit" class="btn primary" data-fr="Inscrivez-vous" data-en="Subscribe">Inscrivez-vous</button>
+        <p class="nl-consent" data-fr="* Votre adresse de messagerie est uniquement utilisée pour vous envoyer les lettres d'information (newsletter, événements…) de GenderChain. Vous pouvez à tout moment demander votre désabonnement en nous écrivant à genderchaindrc@gmail.com." data-en="* Your email address is only used to send you GenderChain's newsletters (newsletter, events…). You may unsubscribe at any time by writing to us at genderchaindrc@gmail.com.">* Votre adresse de messagerie est uniquement utilisée pour vous envoyer les lettres d'information (newsletter, événements…) de GenderChain. Vous pouvez à tout moment demander votre désabonnement en nous écrivant à genderchaindrc@gmail.com.</p>
+        <p class="nl-status" id="nlStatus"></p>
+      </form>
     </div>
   </section>
 
 </main>
 
 <footer class="footer">
-  <img class="footer-logo" src="assets/logo-genderchain-round.jpg" alt="GenderChain">
-  <div class="footer-credit">
-    <img src="assets/team-abel.jpg" alt="Imara Kabiona Abel">
-    <span class="who"><strong>Imara Kabiona Abel</strong><span data-fr="Conception & développement du site" data-en="Site design & development">Conception & développement du site</span></span>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <img class="footer-logo" src="assets/logo-genderchain-round.jpg" alt="GenderChain">
+      <div class="footer-credit">
+        <img src="assets/team-abel.jpg" alt="Imara Kabiona Abel">
+        <span class="who"><strong>Imara Kabiona Abel</strong><span data-fr="Conception & développement du site" data-en="Site design & development">Conception & développement du site</span></span>
+      </div>
+      <div class="social-icons" aria-label="Réseaux sociaux GenderChain">
+        <a href="https://www.facebook.com/imarakabionaabel" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.2h2.4l.4-2.8h-2.8V9.1c0-.8.2-1.4 1.4-1.4h1.5V5.2C15.9 5.1 15 5 14 5c-2.2 0-3.6 1.3-3.6 3.7v2.3H8v2.8h2.4V21z"/></svg></a>
+        <a href="https://x.com/GenderChain" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 5.9c-.7.3-1.5.6-2.3.7a4 4 0 0 0 1.7-2.2c-.8.5-1.7.8-2.6 1a4 4 0 0 0-6.9 3.6A11.3 11.3 0 0 1 3 4.9a4 4 0 0 0 1.2 5.3c-.6 0-1.2-.2-1.7-.5v.1a4 4 0 0 0 3.2 3.9c-.6.2-1.2.2-1.7.1a4 4 0 0 0 3.7 2.8A8 8 0 0 1 2 18.6a11.3 11.3 0 0 0 6.1 1.8c7.3 0 11.3-6.1 11.3-11.3v-.5c.8-.6 1.4-1.3 1.9-2.1-.7.3-1.5.5-2.3.6Z"/></svg></a>
+        <a href="https://chat.whatsapp.com/Bly9EqFzgAgBTYxH9DH9Xu" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20l1.1-5.4A8.5 8.5 0 1 1 21 11.5Z"/></svg></a>
+      </div>
+      <p class="muted" data-fr="Suivez-nous" data-en="Follow us" style="font-size:.75rem;margin-top:.4rem">Suivez-nous</p>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-fr="Plan du site" data-en="Sitemap">Plan du site</h4>
+      <ul class="footer-links">
+        <li><a href="#home" data-fr="Accueil" data-en="Home">Accueil</a></li>
+        <li><a href="#apropos" data-fr="GenderChain" data-en="GenderChain">GenderChain</a></li>
+        <li><a href="#mission" data-fr="Mission" data-en="Mission">Mission</a></li>
+        <li><a href="#valeurs" data-fr="Valeurs" data-en="Values">Valeurs</a></li>
+        <li><a href="#objectif" data-fr="Objectif" data-en="Goal">Objectif</a></li>
+        <li><a href="#realisations" data-fr="Réalisations" data-en="Achievements">Réalisations</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 style="opacity:0" aria-hidden="true">.</h4>
+      <ul class="footer-links">
+        <li><a href="#actualites" data-fr="Actualités" data-en="News">Actualités</a></li>
+        <li><a href="#opportunites" data-fr="Opportunités" data-en="Opportunities">Opportunités</a></li>
+        <li><a href="#equipe" data-fr="Équipe" data-en="Team">Équipe</a></li>
+        <li><a href="#partenaires" data-fr="Partenaires" data-en="Partners">Partenaires</a></li>
+        <li><a href="#soutenir" data-fr="Nous soutenir" data-en="Support us">Nous soutenir</a></li>
+        <li><a href="#newsletter" data-fr="Newsletter" data-en="Newsletter">Newsletter</a></li>
+      </ul>
+    </div>
   </div>
-  <p><small data-fr="© 2026 GenderChain RDC — Femmes, Web3 & blockchain Cardano" data-en="© 2026 GenderChain DRC — Women, Web3 & Cardano blockchain">© 2026 GenderChain RDC — Femmes, Web3 & blockchain Cardano</small></p>
+
+  <p><small data-fr="© 2026 GenderChain RDC — Femmes, Web3 & blockchain Cardano — Tous droits réservés" data-en="© 2026 GenderChain DRC — Women, Web3 & Cardano blockchain — All Rights Reserved">© 2026 GenderChain RDC — Femmes, Web3 & blockchain Cardano — Tous droits réservés</small></p>
 </footer>
+
+<!-- ============ BANDEAU COOKIES ============ -->
+<div class="cookie-banner" id="cookieBanner">
+  <p data-fr="Ce site utilise uniquement des cookies techniques nécessaires à son bon fonctionnement (mémoriser votre langue, par exemple). Nous n'utilisons aucun cookie publicitaire ni traceur tiers." data-en="This site only uses technical cookies required for it to work properly (remembering your language choice, for example). We do not use any advertising or third-party tracking cookies.">Ce site utilise uniquement des cookies techniques nécessaires à son bon fonctionnement (mémoriser votre langue, par exemple). Nous n'utilisons aucun cookie publicitaire ni traceur tiers.</p>
+  <div class="cookie-actions">
+    <button class="btn ghost sm" id="cookieDetails" data-fr="En savoir plus" data-en="Learn more">En savoir plus</button>
+    <button class="btn primary sm" id="cookieAccept" data-fr="J'ai compris" data-en="Got it">J'ai compris</button>
+  </div>
+</div>
 
 <script src="js/main.js"></script>
 </body>
