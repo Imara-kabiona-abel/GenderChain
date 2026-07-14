@@ -31,6 +31,7 @@
 }
 
 *{box-sizing:border-box;}
+svg{max-width:100%;height:auto;display:block;}
 html{scroll-behavior:smooth;}
 body{
   margin:0;background:var(--paper);color:var(--ink);
@@ -288,10 +289,8 @@ main > section[id]{scroll-margin-top:var(--nav-h);}
   padding:1rem 0;position:relative;
 }
 .partner{
-  display:flex;flex-direction:column;align-items:center;gap:.7rem;
-  opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease;
+  display:flex;flex-direction:column;align-items:center;gap:.7rem;flex:none;
 }
-.partner.in{opacity:1;transform:none;}
 .partner img{width:78px;height:78px;border-radius:50%;object-fit:contain;background:#fff;box-shadow:var(--shadow-card);padding:8px;}
 .partner .pname{font-family:var(--font-display);font-weight:700;font-size:.95rem;}
 .partner .plabel{font-family:var(--font-mono);font-size:.68rem;color:var(--slate-500);letter-spacing:.05em;text-transform:uppercase;}
@@ -345,8 +344,12 @@ main > section[id]{scroll-margin-top:var(--nav-h);}
 /* =========================================================
    Section à fond photo (Nos valeurs)
    ========================================================= */
-.section-bgphoto{position:relative;background-size:cover;background-position:center;padding:0;overflow:hidden;}
-.section-bgphoto-overlay{position:absolute;inset:0;background:linear-gradient(175deg, rgba(23,10,27,.92), rgba(36,17,41,.86) 60%, rgba(23,10,27,.94));}
+.section-bgphoto{
+  position:relative;background-size:cover;background-position:center;padding:0;overflow:hidden;
+  background-image:
+    linear-gradient(175deg, rgba(15,7,18,.88), rgba(23,10,27,.8) 55%, rgba(15,7,18,.9)),
+    var(--bg-photo);
+}
 .section-bgphoto-content{position:relative;z-index:1;padding:clamp(3.2rem,6vw,5.5rem) clamp(1.25rem,5vw,3rem);max-width:1180px;margin:0 auto;}
 .section-bgphoto .eyebrow.on-dark{color:#F6C9E4;}
 .section-bgphoto .eyebrow.on-dark::before{box-shadow:0 0 0 3px rgba(230,22,157,.28);}
