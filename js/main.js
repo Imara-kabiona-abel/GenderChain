@@ -39,16 +39,6 @@
     });
   })();
 
-  /* ---------------- Bouton "Autres langues" (Google Traduction, nouvel onglet) ---------------- */
-  (function initTranslateMore() {
-    var btn = document.getElementById("translateMore");
-    if (!btn) return;
-    btn.addEventListener("click", function () {
-      var url = "https://translate.google.com/translate?sl=fr&u=" + encodeURIComponent(window.location.href);
-      window.open(url, "_blank", "noopener");
-    });
-  })();
-
   /* ---------------- Scroll-spy ---------------- */
   (function initScrollSpy() {
     var navLinks = document.querySelectorAll(".nav-links a[href^='#']");
@@ -108,16 +98,13 @@
     }
   })();
 
-  /* ---------------- Reveal on scroll (cards + partners) ---------------- */
+  /* ---------------- Reveal on scroll ---------------- */
   (function initReveal() {
-    var targets = document.querySelectorAll(".reveal, .ps-card, .link-card, .team-member, .achv-card, .support-card");
+    var targets = document.querySelectorAll(".reveal, .ps-card, .link-card, .team-member, .achv-card, .support-card, .value-card, .news-card");
     targets.forEach(function (el) { el.classList.add("reveal"); });
-
-    var partners = document.querySelectorAll(".partner");
 
     if (!("IntersectionObserver" in window)) {
       targets.forEach(function (el) { el.classList.add("in"); });
-      partners.forEach(function (el) { el.classList.add("in"); });
       return;
     }
 
@@ -127,20 +114,101 @@
       });
     }, { threshold: 0.12 });
     targets.forEach(function (el) { revealObserver.observe(el); });
+  })();
 
-    /* Partenaires : apparition progressive décalée, l'un après l'autre */
-    if (partners.length) {
-      var partnersObserver = new IntersectionObserver(function (entries, o) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            var idx = Array.prototype.indexOf.call(partners, entry.target);
-            setTimeout(function () { entry.target.classList.add("in"); }, idx * 180);
-            o.unobserve(entry.target);
-          }
+  /* ---------------- Curseur stylé (ordinateur uniquement) ---------------- */
+  (function initCursor() {
+    var ring = document.getElementById("cursorRing");
+    if (!ring || window.matchMedia("(hover: none), (pointer: coarse)").matches) return;
+    var shown = false;
+    document.addEventListener("mousemove", function (e) {
+      if (!shown) { ring.classList.add("show"); shown = true; }
+      ring.style.left = e.clientX + "px";
+      ring.style.top = e.clientY + "px";
+    });
+    document.addEventListener("mouseleave", function () { ring.classList.remove("show"); });
+    document.querySelectorAll("a, button, input, .partner, .value-card").forEach(function (el) {
+      el.addEventListener("mouseenter", function () { ring.classList.add("pointer"); });
+      el.addEventListener("mouseleave", function () { ring.classList.remove("pointer"); });
+    });
+  })();
+
+  /* ---------------- Actualités (chargées depuis actualites.json) ---------------- */
+  (function initNews() {
+    var grid = document.getElementById("newsGrid");
+    if (!grid) return;
+    fetch("actualites.json")
+      .then(function (r) { return r.json(); })
+      .then(function (items) {
+        grid.innerHTML = "";
+        if (!items || !items.length) {
+          grid.innerHTML = '<p class="muted">Aucune actualité publiée pour l\'instant.</p>';
+          return;
+        }
+        items.forEach(function (item) {
+          var card = document.createElement("div");
+          card.className = "news-card";
+          card.innerHTML = '<div class="news-date">' + (item.date || "") + '</div>'
+            + "<h3>" + (item.titre || "") + "</h3>"
+            + "<p>" + (item.resume || "") + "</p>"
+            + (item.lien ? '<a href="' + item.lien + '" target="_blank" rel="noopener">Lire la suite →</a>' : "");
+          grid.appendChild(card);
         });
-      }, { threshold: 0.2 });
-      partners.forEach(function (el) { partnersObserver.observe(el); });
+      })
+      .catch(function () {
+        grid.innerHTML = '<p class="muted">Actualités indisponibles pour le moment.</p>';
+      });
+  })();
+
+  /* ---------------- Newsletter (Formspree) ---------------- */
+  (function initNewsletter() {
+    var form = document.getElementById("newsletterForm");
+    var status = document.getElementById("nlStatus");
+    if (!form || !status) return;
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      status.textContent = "Envoi en cours…";
+      status.className = "nl-status";
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      })
+        .then(function (r) {
+          if (r.ok) {
+            status.textContent = "Merci ! Votre inscription a bien été prise en compte.";
+            status.className = "nl-status ok";
+            form.reset();
+          } else {
+            status.textContent = "Une erreur est survenue. Réessayez, ou écrivez-nous directement à genderchaindrc@gmail.com.";
+            status.className = "nl-status err";
+          }
+        })
+        .catch(function () {
+          status.textContent = "Connexion impossible. Réessayez, ou écrivez-nous à genderchaindrc@gmail.com.";
+          status.className = "nl-status err";
+        });
+    });
+  })();
+
+  /* ---------------- Bandeau cookies ---------------- */
+  (function initCookieBanner() {
+    var banner = document.getElementById("cookieBanner");
+    if (!banner) return;
+    var KEY = "gc_cookie_ack";
+    if (!localStorage.getItem(KEY)) {
+      setTimeout(function () { banner.classList.add("show"); }, 900);
     }
+    var accept = document.getElementById("cookieAccept");
+    var details = document.getElementById("cookieDetails");
+    if (accept) accept.addEventListener("click", function () {
+      localStorage.setItem(KEY, "1");
+      banner.classList.remove("show");
+    });
+    if (details) details.addEventListener("click", function () {
+      window.location.hash = "#cookieBanner";
+      alert("Ce site n'utilise que des cookies techniques nécessaires à son fonctionnement (par exemple, mémoriser la langue choisie). Aucun cookie publicitaire, aucun traceur tiers, aucune revente de données. Si GenderChain met en place un jour un outil d'analyse d'audience ou de publicité, cette bannière sera mise à jour en conséquence.");
+    });
   })();
 
 })();
